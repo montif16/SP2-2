@@ -15,8 +15,8 @@ public class ElectricCar extends ACar{
     public int getMaxRange() {
         return maxRange;
     }
-    public int getWhPrKm(){
-        return batteryCapacity/maxRange;
+    public float getWhPrKm(){
+        return (float) batteryCapacity /maxRange;
     }
     public float convert(){
         return (91.25f/getWhPrKm())/100;
