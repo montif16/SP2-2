@@ -29,7 +29,6 @@ public class ElectricCar extends ACar{
             return 330;
         } else if (convert()>=20 && convert()<=15){
             return 1050;
-
         } else if (convert()>=14 && convert()<=10){
             return 2340;
         } else if (convert()>=9 && convert()<=5) {
