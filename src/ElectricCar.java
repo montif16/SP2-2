@@ -17,21 +17,21 @@ public class ElectricCar extends ACar{
         return maxRange;
     }
     public float getWhPrKm(){
-        return (float) batteryCapacity /maxRange;
+        return (float) (batteryCapacity*1000) / maxRange;
     }
     public float convert(){
-        return (91.25f/getWhPrKm())/100;
+        return (9125f/getWhPrKm());
     }
 
     @Override
     public int getRegistrationFee() {
         if(convert()>20){
             return 330;
-        } else if (convert()>=20 && convert()<=15){
+        } else if (convert()>=20){
             return 1050;
-        } else if (convert()>=14 && convert()<=10){
+        } else if (convert()>=14){
             return 2340;
-        } else if (convert()>=9 && convert()<=5) {
+        } else if (convert()>=9) {
             return 5500;
         } else if (convert()<=4) {
             return 10470;
